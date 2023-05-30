@@ -1,7 +1,3 @@
-package d_29_05_2023;
-
-import d_15_05_2023.Student_Info;
-
 public class student {
 
 	public static void main(String[] args) {
