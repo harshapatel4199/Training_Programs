@@ -1,6 +1,3 @@
-package d_29_05_2023;
-
-
 public class Account {
 
 	public static void main(String[] args) {
