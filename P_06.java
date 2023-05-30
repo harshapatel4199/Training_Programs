@@ -1,5 +1,3 @@
-package d_16_05_2023;
-
 public class Employee_Access {
 
 	public static void main(String[] args) {
