@@ -13,5 +13,5 @@ public class MaxNumber {
 		int max_number = (a>b)?a:b;
 		System.out.println(max_number + " is maximum number");
 	}
-
+ 
 }
