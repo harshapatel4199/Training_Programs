@@ -1,51 +1,57 @@
 
 public class Main {
+    public static void main(String[] args) {
+      
+        Rectangle rectangle = new Rectangle(5, 7);
+        Circle circle = new Circle(3);
+        Triangle triangle = new Triangle(4, 6);
 
-	public static void main(String[] args) {
-		Employee e = new Employee("ram",28,999999,"ayodhya",999,"ban-vidhya");
-		e.getMemberDetail();
-		e.printSalary();
-		e.getSpecialization();
-	}
+       
+        System.out.println("Area of Rectangle: " + rectangle.getArea());
+        System.out.println("Area of Circle: " + circle.getArea());
+        System.out.println("Area of Triangle: " + triangle.getArea());
+    }
+}
 
+interface Shape {
+    double getArea();
 }
-class Member{
-	String name;
-	int age;
-	int phoneNumber;
-	String address;
-	int salary;
-	public void printSalary() {
-		System.out.println("salary is : " + salary);
-	}
-	Member(String name,int age,int phoneNumber,String address,int salary){
-		this.name = name;
-		this.age = age;
-		this.phoneNumber = phoneNumber;
-		this.address = address;
-		this.salary = salary;
-	}
-	void getMemberDetail() {
-		System.out.println(name + " " +age + " " +phoneNumber + " " +address + " " +salary);
-	}
+
+class Rectangle implements Shape {
+    private double length;
+    private double width;
+
+    public Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+    public double getArea() {
+        return length * width;
+    }
 }
-class Employee extends Member{
-	Employee(String name, int age, int phoneNumber, String address, int salary,String specialization) {
-		super(name, age, phoneNumber, address, salary);
-		this.specialization = specialization;
-	}
-	String specialization;
-	void getSpecialization() {
-		System.out.println("specialization is : " + specialization);
-	}
+
+class Circle implements Shape {
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    public double getArea() {
+        return Math.PI * radius * radius;
+    }
 }
-class Manager extends Member{
-	Manager(String name, int age, int phoneNumber, String address, int salary,String department) {
-		super(name, age, phoneNumber, address, salary);
-		this.department = department;
-	}
-	String department;
-	void getDepartment() {
-		System.out.println("department is : " + department);
-	}
+
+class Triangle implements Shape {
+    private double base;
+    private double height;
+
+    public Triangle(double base, double height) {
+        this.base = base;
+        this.height = height;
+    }
+
+    public double getArea() {
+        return 0.5 * base * height;
+    }
 }
